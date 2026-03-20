@@ -8,7 +8,7 @@ from services.payment_service import PaymentService
 
 product = Product(1,"Laptop",1000) 
 cart = Cart() 
-cart.add_item(CartItem(product,1)) 
+cart.add_item(CartItem(product,)) 
 order = Order(cart) 
 payment = CreditCardPayment() 
 payment_service = PaymentService() 

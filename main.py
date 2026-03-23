@@ -10,7 +10,7 @@ product = Product(1,"Laptop",1000)
 cart = Cart() 
 cart.add_item(CartItem(product,)) 
 order = Order(cart) 
-payment = CreditCardPayment() 
-payment_service = PaymentService() 
-order_service = OrderService(payment_service) 
-order_service.checkout(order,payment)
+payment = CreditCardPayment() # tạo một phương thức thanh toán cụ thể (thẻ tín dụng)
+payment_service = PaymentService() # tạo một dịch vụ thanh toán để xử lý việc thanh toán
+order_service = OrderService(payment_service) # tạo một dịch vụ đơn hàng để xử lý việc thanh toán và hoàn tất đơn hàng
+order_service.checkout(order,payment) # thực hiện thanh toán và hoàn tất đơn hàng
